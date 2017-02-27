@@ -2,7 +2,7 @@
 using namespace std;
 const int MAX = 300009;
 char pat[MAX];
- 
+
 struct node{
 	bool leaf;
 	vector<int> adj;
@@ -12,7 +12,7 @@ struct node{
 	}
 };
 vector<node> trie;
- 
+
 void insert(char* s){
 	int cur = 0;
 	for(int i=0;s[i]!='\0';i++){
@@ -24,9 +24,9 @@ void insert(char* s){
 	}
 	trie[cur].leaf = 1;
 }
- 
+
 string P;
- 
+
 void print(int cur){
 	if(trie[cur].leaf)
 		cout << P << endl;
@@ -38,10 +38,9 @@ void print(int cur){
 		}
 	}
 }
- 
+
 int main()
 {
-//    freopen("/home/khaled/file.in","r",stdin);
     int k;
     while(scanf("%d\n",&k)>=1){
 		trie.clear();
